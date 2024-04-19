@@ -88,4 +88,41 @@ mongoose.connect('mongodb://localhost:27017/meraDatabase', {
 
 
 
+
+// FuLL code
+
+const express = require('express');
+const app = express();
+
+app.listen(3000, () => {
+    console.log("Server is runniing on port 3000");
+});
+
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
+
+app.get('/temple', (request,response) => {
+    response.send(" worl");
+});
+
+ 
+app.post('/api/cars', (request, response) => {
+    const {name, brand} = request.body;
+    console.log(name);
+    console.log(brand);
+    response.send("requst send succussfully"); 
+});
+
+
+
 // Note- shortcut use cls in commmand, use tab to autowrite the full folder name, Ctrl+c to stop server
+
+
+// how to save github codespace into repo permanently
+git status
+git add .
+git commit -m "Add new feature"
+git push origin main
+
+// you can see the steps is you want to save data from VScode to github 
