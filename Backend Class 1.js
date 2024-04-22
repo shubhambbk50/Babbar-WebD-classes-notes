@@ -50,8 +50,12 @@ app.post('/api/cars', (request, response) => {
 // to run our server
 // method one
 node Server.js
+// When you execute node server.js, it starts the Node.js application once.
 //method two
 nodemon Server.js
+// When you execute nodemon server.js, it starts the Node.js application and monitors the file system for changes in the source code.
+// If changes are detected in any of the files being monitored, nodemon automatically restarts the Node.js application.
+
 
 //  MONGODB
 // open source no-SQL DB, it stores data in form of document, key-value pair, graph, etc
@@ -100,7 +104,7 @@ app.listen(3000, () => {
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
-
+//now bodyparser is not used, it is old technique
 
 app.get('/temple', (request,response) => {
     response.send(" worl");
